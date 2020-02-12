@@ -21,10 +21,19 @@ public class ReservaMesa {
             System.out.println("Número de mesa inválido");
         } else {
             while (mesaEscolhida > 0 && cadeirasTotais < 600) {
-                System.out.println("Informe a quantidade de cadeiras que serão reservadas na mesa " + mesaEscolhida + ":");
+                System.out.println("Informe a quantidade de cadeiras que serão reservadas na mesa " + mesaEscolhida +
+                        ":");
                 cadeirasEscolhidas = sc.nextInt();
                 if (cadeirasEscolhidas <= 0) {
                     System.out.println("Número de cadeiras inválido!");
+
+                    /* Resolvi alterar o texto requerido pelo exercício em duas condições: Uma onde o número de cadeiras
+                     * é inválido (menor ou igual a zero... não faz sentido reservar uma mesa, sem cadeiras ou com
+                     * cadeiras negativas) ou quando o número de cadeiras novas somadas as cadeiras ja reservadas
+                     * naquela mesa ultrapassam o limite de seis cadeiras, ou seja "não há lugares suficiente na mesa
+                     * pretendida"
+                     */
+                    
                 } else {
                     if (mesaReserva[mesaEscolhida] + cadeirasEscolhidas > 6) {
                         System.out.println("Número de cadeiras na mesa " + mesaEscolhida + " excede o limite de 6" +
