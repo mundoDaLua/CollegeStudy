@@ -18,7 +18,7 @@ public class ReservaMesa {
         mesaEscolhida = sc.nextInt();
 
         if (mesaEscolhida < 0) {
-            System.out.println("Numero de mesa inválido");
+            System.out.println("Número de mesa inválido");
         } else {
             while (mesaEscolhida > 0 && cadeirasTotais < 600) {
                 System.out.println("Informe a quantidade de cadeiras que serão reservadas na mesa " + mesaEscolhida + ":");
