@@ -1,8 +1,10 @@
+package aula02;
+
 public class Exercicio02 {
 
     public static void main(String[] args) {
 
-        int quadrado = 0;
+        int quadrado;
 
         for (int i = 15; i <= 200; i++) {
             quadrado = i * i;

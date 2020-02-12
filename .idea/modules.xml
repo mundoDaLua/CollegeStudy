@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Graduacao/Graduacao.iml" filepath="$PROJECT_DIR$/Graduacao/Graduacao.iml" />
       <module fileurl="file://$PROJECT_DIR$/Workspace.iml" filepath="$PROJECT_DIR$/Workspace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/estruturaDeDados/estruturaDeDados.iml" filepath="$PROJECT_DIR$/estruturaDeDados/estruturaDeDados.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tecnicasDeProgramacao/tecnicasDeProgramacao.iml" filepath="$PROJECT_DIR$/tecnicasDeProgramacao/tecnicasDeProgramacao.iml" />
     </modules>
   </component>
 </project>

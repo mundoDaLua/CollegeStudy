@@ -1,3 +1,5 @@
+package aula02;
+
 import java.util.Scanner;
 
 public class Exercicio03 {
@@ -5,7 +7,7 @@ public class Exercicio03 {
     public static void main(String[] args) {
 
         double serie = 1;
-        double numero = 0;
+        double numero;
         int denominador;
 
         Scanner sc = new Scanner(System.in);
