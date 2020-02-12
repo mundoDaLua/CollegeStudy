@@ -1,2 +1,4 @@
-# Default ignored files
+# Arquivos ignorados no commit do git
+
 /workspace.xml
+/out/
