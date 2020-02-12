@@ -14,5 +14,4 @@ public class Exercicio04 {
             System.out.print(" " + fibonacci);
         }
     }
-
 }
