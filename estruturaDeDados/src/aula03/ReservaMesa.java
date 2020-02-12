@@ -33,13 +33,15 @@ public class ReservaMesa {
                         mesaReserva[mesaEscolhida] += cadeirasEscolhidas;
                         cadeirasTotais += cadeirasEscolhidas;
                         mesasTotais++;
+                        System.out.println("Reserva realizada com sucesso!");
                     } else {
                         mesaReserva[mesaEscolhida] += cadeirasEscolhidas;
                         cadeirasTotais += cadeirasEscolhidas;
+                        System.out.println("Reserva realizada com sucesso!");
                     }
                 }
 
-                System.out.println("Informe a mesa que deseja reservar (de 1 a 100) ou ZERO para finalizar");
+                System.out.println("\nInforme a mesa que deseja reservar (de 1 a 100) ou ZERO para finalizar");
                 mesaEscolhida = sc.nextInt();
             }
 
