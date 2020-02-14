@@ -20,9 +20,6 @@ public class Main {
         System.out.println("Livro " + livro.getTitulo() + " do autor " + livro.getAutor() +
                 " da editora " + livro.getEditora() + " adicionado com sucesso!");
 
-
-
-
     }
 
 }
