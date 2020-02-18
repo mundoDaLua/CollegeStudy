@@ -10,11 +10,11 @@ public class Livro {
 
     }
 
-    public Livro(String autor, String editora) {
-        this.autor = autor;
-        this.editora = editora;
-        this.titulo = titulo;
-    }
+//    public Livro(String autor, String editora) {
+//        this.autor = autor;
+//        this.editora = editora;
+//        this.titulo = titulo;
+//    }
 
     public Livro(String titulo, String autor, String editora) {
         this.autor = autor;
@@ -23,9 +23,11 @@ public class Livro {
     }
 
     public String getTitulo() {
+        System.out.println();
         return titulo;
     }
     public void setTitulo(String titulo) {
+        System.out.println();
         this.titulo = titulo;
     }
 
