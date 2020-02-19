@@ -1,6 +1,6 @@
-package aula06;
+package ed_aula06;
 
-import aula05.Livro;
+import ed_aula05.Livro;
 
 import java.util.Scanner;
 

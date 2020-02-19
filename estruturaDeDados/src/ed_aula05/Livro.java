@@ -1,4 +1,4 @@
-package aula05;
+package ed_aula05;
 
 public class Livro {
 
