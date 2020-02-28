@@ -1,4 +1,4 @@
-package tp_aula04;
+package tp_aula03;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package tp_aula06;
+package tp_aula05;
 
 public class Aluno {
 
