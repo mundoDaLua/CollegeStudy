@@ -2,12 +2,12 @@ package ed_aula06;
 
 import ed_aula05.Livro;
 
-public class ArrayStack {
+public class PilhaVetor {
 
     Livro top;
     int size;
 
-    public ArrayStack(int size) {
+    public PilhaVetor(int size) {
         this.size = size;
     }
 

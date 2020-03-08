@@ -1,6 +1,6 @@
 package ed_aula10;
 
-public class FilaPessoa {
+public class FilaVetor {
 
     private int tamanho;
     private Pessoa filaPessoa[] = new Pessoa[tamanho];
