@@ -6,8 +6,8 @@ import java.util.GregorianCalendar;
 public class Pessoa {
 
     private String nome;
-    private String dataNascimento;
     private String sexo;
+    private String dataNascimento;
     private double altura;
     private int idade;
 
@@ -18,18 +18,18 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
     public String getSexo() {
         return sexo;
     }
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public double getAltura() {
