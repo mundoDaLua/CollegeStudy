@@ -39,7 +39,7 @@ public class Pessoa {
         this.altura = altura;
     }
 
-    public String getPessoa() { // TODO descobrir como se retorna um objeto inteiro sem ser criando uma String (tipo JavaScript...)
+    public String getPessoa() {
         getIdade();
         return "{" +
                 "\n    Nome: " + nome + "," +
