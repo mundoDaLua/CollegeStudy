@@ -6,6 +6,24 @@ public class Pessoa {
     private String matricula;
     private String telefone;
 
+    public Pessoa() {
+    }
+
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, String matricula) {
+        this.nome = nome;
+        this.matricula = matricula;
+    }
+
+    public Pessoa(String nome, String matricula, String telefone) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.telefone = telefone;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -28,9 +46,8 @@ public class Pessoa {
     }
 
     public String getPessoa() {
-        String pessoa = "Nome: " + this.getNome() + "\n" + "Matricula: " + this.getMatricula() +
+        return "Nome: " + this.getNome() + "\n" + "Matricula: " + this.getMatricula() +
                 "\n" + "Telefone: " + this.getTelefone();
-        return pessoa;
     }
 
 }

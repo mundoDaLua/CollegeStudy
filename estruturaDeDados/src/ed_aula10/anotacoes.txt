@@ -1,5 +1,3 @@
 Data: 28-02-2020
 
-Conteudo: Fila em vetor
-
-TODO Implementação de uma Fila em um vetor
+Conteudo: Implementação de uma Fila em um vetor
