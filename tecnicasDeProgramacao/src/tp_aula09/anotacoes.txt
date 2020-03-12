@@ -1,0 +1,20 @@
+Data: 10-03-20202
+
+Conteudo:
+
+TODO TP1ListadeExercicios02-Classes
+
+1 - Crie uma classe chamada AdivinhaNumero. Essa classe deve ter um atributo privado int chamado
+numero. Crie os métodos get e set para o atributo. Crie um método privado chamado sorteiaNumero,
+que criará um valor aleatório de 1 a 100 para o atributo numero. Utilize esse método em um construtor
+para gerar esse número. Crie um método público chamado dica que receba como parâmetro int tentativa.
+Esse método orientará o usuário com as mensagens “o número é maior” ou “o número é menor”, até o
+usuário adivinhar o número. Se após 5 tentativas o usuário não acertar o número, o método emite
+uma mensagem revelando o número sorteado.
+
+2 - Escreva uma classe classeLampada com um construtor de forma que instâncias desta só possam
+ser criadas se um estado inicial for passado para o construtor. Esse estado pode ser o valor booleano
+que indica se a lâmpada está acesa (true) ou apagada (false). Crie um atributo status do tipo string.
+Crie os métodos GET/SET correspondentes. Crie um objeto lampada1 com status true e outro objeto
+lampada2 com status false. Informe ao usuário se a lâmpada está acesa ou apagada, através do atributo
+status.

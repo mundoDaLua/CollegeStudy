@@ -30,6 +30,7 @@ public class Menu {
         p.setAltura(altura);
 
         System.out.println("Pessoa:\n" +p.getPessoa() + "\nCriado com sucesso!");
+
     }
 
     private static void opcao2() {
