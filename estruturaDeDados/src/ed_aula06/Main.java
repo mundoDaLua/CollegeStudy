@@ -9,8 +9,8 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Qual o tamanho da pilha de livros?");
-
+//        System.out.println("Qual o tamanho da pilha de livros?");
+//
 //        PilhaVetor pilhaLivro = new PilhaVetor(sc.nextInt());
 
         PilhaVetor pilhaLivro = new PilhaVetor();
