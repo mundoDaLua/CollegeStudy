@@ -87,7 +87,6 @@ public class PilhaVetor {
         return pilhaLivro[posicaoPilha].getTitulo();
     }
 
-
 //    // TODO Retornar uma String contendo todos os Livro na pilhaLivro
 //    public String getPilhaLivro() {
 //        String colecao = "[ ";
