@@ -7,7 +7,7 @@ public class ReservaMesa {
     public static void main(String[] args) {
 
         int mesaEscolhida;
-        int[] mesaReserva = new int[101];
+        int mesaReserva[] = new int[101];
         int mesasTotais = 0;
         int cadeirasEscolhidas;
         int cadeirasTotais = 0;

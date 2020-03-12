@@ -7,27 +7,27 @@ public class Livro {
     private String editora;
 
     public Livro() {
-
     }
 
-//    public Livro(String autor, String editora) {
-//        this.autor = autor;
-//        this.editora = editora;
-//        this.titulo = titulo;
-//    }
-
-    public Livro(String titulo, String autor, String editora) {
-        this.autor = autor;
-        this.editora = editora;
+    public Livro(String titulo) {
         this.titulo = titulo;
     }
 
+    public Livro(String titulo, String autor) {
+        this.titulo = titulo;
+        this.autor = autor;
+    }
+
+    public Livro(String titulo, String autor, String editora) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.editora = editora;
+    }
+
     public String getTitulo() {
-        System.out.println();
         return titulo;
     }
     public void setTitulo(String titulo) {
-        System.out.println();
         this.titulo = titulo;
     }
 

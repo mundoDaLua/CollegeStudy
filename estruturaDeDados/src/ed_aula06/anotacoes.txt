@@ -1,5 +1,3 @@
 Data: 18-02-2020
 
-Conteudo: Pilha em vetor
-
-TODO Implementar uma Pilha em um Vetor com os métodos push(), pop() e isEmpty()
+Conteudo: Implementar uma Pilha em um Vetor com os métodos push(), top(), pop() e isEmpty()

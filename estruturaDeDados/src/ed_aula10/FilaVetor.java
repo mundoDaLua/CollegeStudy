@@ -28,9 +28,11 @@ public class FilaVetor {
 
     public boolean isEmpity() {
         // TODO
+        return true;
     }
 
     public boolean isFull() {
         // TODO
+        return true;
     }
 }
