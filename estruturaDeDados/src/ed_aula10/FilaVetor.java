@@ -98,11 +98,8 @@ public class FilaVetor {
         }
     }
 
+//    // TODO Retornar uma String contendo todos as Pessoa na filaPessoa
+//    public String getFilaPessoa() {
+//    }
 
-    public int getFinalFila() {
-        return finalFila;
-    }
-    public int getTamanhoFila() {
-        return tamanhoFila;
-    }
 }
