@@ -1,5 +1,3 @@
 Data: 03-03-2020
 
-Conteudo: Lista em vetor
-
-TODO Implementação de uma Lista em um vetor
+Conteudo: Lista desordenada em vetor
