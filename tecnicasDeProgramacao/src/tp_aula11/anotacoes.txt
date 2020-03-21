@@ -1,3 +1,10 @@
 Data: 20-02-2020
 
 Conteudo:
+
+Crie uma classe chamada Empresa capaz de armazenar os dados de uma empresa (Nome, Endereço, CEP e Fone). Inclua um
+construtor sem argumentos e um que receba os dados como argumentos e os inicialize. Escreva duas funções, uma para
+fazer a interface com o usuário da entrada de dados, getDados(), e outra para imprimir os dados, printDados().
+
+Observação: para o getDados() utilize chamadas aos métodos set de cada atributo e para o printDados(), utilize as
+chamadas aos métodos get de cada atributo. Para esse exercício, deixaremos os getters e setters como privados.
