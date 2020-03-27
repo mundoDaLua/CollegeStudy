@@ -89,7 +89,7 @@ public class FilaVetor {
     }
 
     // Verifica qual a primeira Pessoa da filaPessoa sem remove-la desde que não esteja vazia
-    public String peeek() {
+    public String peek() {
         if (!isEmpty()) {
             Pessoa pessoa = filaPessoa[0];
             return pessoa.getNome();

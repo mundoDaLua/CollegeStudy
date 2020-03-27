@@ -14,26 +14,26 @@ public class Main {
 
         FilaVetor filaPessoa = new FilaVetor();
         System.out.println("Vazio? " + filaPessoa.isEmpty());
-        System.out.println("Ultimo da fila: " + filaPessoa.peeek());
+        System.out.println("Ultimo da fila: " + filaPessoa.peek());
         System.out.println("Saiu o ultimo da fila: " + filaPessoa.remove());
 
         Pessoa fulano = new Pessoa("Fulano");
 
         filaPessoa.add(fulano);
         System.out.println("\nVazio? " + filaPessoa.isEmpty());
-        System.out.println("Ultimo da fila: " + filaPessoa.peeek());
+        System.out.println("Ultimo da fila: " + filaPessoa.peek());
         System.out.println("Saiu o ultimo da fila: " + filaPessoa.remove());
         System.out.println("Vazio? " + filaPessoa.isEmpty());
-        System.out.println("Ultimo da fila: " + filaPessoa.peeek());
+        System.out.println("Ultimo da fila: " + filaPessoa.peek());
 
         filaPessoa.add(new Pessoa("Sicrano"));
         filaPessoa.add(new Pessoa("Beltrano"));
         filaPessoa.add(new Pessoa("Alguem"));
         filaPessoa.add(new Pessoa("Ninguem"));
         System.out.println("\nVazio? " + filaPessoa.isEmpty());
-        System.out.println("Ultimo da fila: " + filaPessoa.peeek());
+        System.out.println("Ultimo da fila: " + filaPessoa.peek());
         System.out.println("Saiu o ultimo da fila: " + filaPessoa.remove());
-        System.out.println("Ultimo da fila: " + filaPessoa.peeek());
+        System.out.println("Ultimo da fila: " + filaPessoa.peek());
         System.out.println("Saiu o ultimo da fila: " + filaPessoa.remove());
     }
 }
