@@ -30,10 +30,23 @@ public class Main {
         android.setAlunos(john);
 
         System.out.println("O curso " + java.getNome() + " tem o instrutor: " + java.getInstrutor() +
-                " e os alunos são: " + java.getAlunos());
+                " tem " + (java.getAlunosMatriculados() + 1) + " alunos matriculados que são: " + java.getAlunosCurso());
         System.out.println("O curso " + android.getNome() + " tem o instrutor: " + android.getInstrutor() +
-                " e os alunos são: " + android.getAlunos());
+                " tem " + (android.getAlunosMatriculados() + 1) + " alunos matriculados que são: " + android.getAlunosCurso());
         System.out.println("O curso " + web.getNome() + " tem o instrutor: " + web.getInstrutor() +
-                " e os alunos são: " + web.getAlunos());
+                " e os alunos são: " + web.getAlunosCurso());
+
+        System.out.print("Os alunos que fazem os cursos " + java.getNome() + " e " + android.getNome() +
+                " simultâneamente são: ");
+        String alunosSimultaneos = "";
+        int i;
+        int j;
+        for (i = 0; i <= java.getAlunosMatriculados(); i++) {
+            for (j = 0; j <= android.getAlunosMatriculados() && java.searchAluno(i) != android.searchAluno(j); j++);
+            if (j < 4) {
+                alunosSimultaneos += java.searchAluno(i) + " ";
+            }
+        }
+        System.out.println(alunosSimultaneos);
     }
 }

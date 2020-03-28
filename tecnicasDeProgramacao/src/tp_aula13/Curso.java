@@ -41,11 +41,11 @@ public class Curso {
         this.instrutor = instrutor;
     }
 
-    public String getAlunos() {
+    public String getAlunosCurso() {
         String listaAlunos = "[";
         if (alunosMatriculados >= 0) {
-            for (int i = 0; i < alunosMatriculados; i++) {
-                if (i < (alunosMatriculados - 1)) {
+            for (int i = 0; i <= getAlunosMatriculados(); i++) {
+                if (i < (getAlunosMatriculados())) {
                     listaAlunos += " [ Nome: " + alunos[i].getNome() + ", Matrícula: " + alunos[i].getMatricula() + " ],";
                 } else {
                     listaAlunos += " [ Nome: " + alunos[i].getNome() + ", Matrícula: " + alunos[i].getMatricula() + " ]";
@@ -61,5 +61,24 @@ public class Curso {
         } else {
             System.out.println("Erro: Turma cheia!");
         }
+    }
+
+    public String searchAluno(int i) {
+        return alunos[i].getNome();
+    }
+    public boolean searchAluno(String nome) {
+        int i;
+        for (i = 0; i > getAlunosMatriculados() || alunos[i].getNome() == nome; i++) {
+        }
+        if (i < 4) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public int getAlunosMatriculados() {
+        return alunosMatriculados;
     }
 }
