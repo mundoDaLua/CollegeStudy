@@ -46,9 +46,11 @@ public class Curso {
         if (alunosMatriculados >= 0) {
             for (int i = 0; i <= getAlunosMatriculados(); i++) {
                 if (i < (getAlunosMatriculados())) {
-                    listaAlunos += " [ Nome: " + alunos[i].getNome() + ", Matrícula: " + alunos[i].getMatricula() + " ],";
+                    listaAlunos += " [ Nome: " + alunos[i].getNome() +
+                            ", Matrícula: " + alunos[i].getMatricula() + " ],";
                 } else {
-                    listaAlunos += " [ Nome: " + alunos[i].getNome() + ", Matrícula: " + alunos[i].getMatricula() + " ]";
+                    listaAlunos += " [ Nome: " + alunos[i].getNome() +
+                            ", Matrícula: " + alunos[i].getMatricula() + " ]";
                 }
             }
         }
@@ -94,7 +96,8 @@ public class Curso {
         int i;
         int j;
         for (i = 0; i <= primeiro.getAlunosMatriculados(); i++) {
-            for (j = 0; j <= primeiro.getAlunosMatriculados() && !primeiro.searchAluno(i).equals(segundo.searchAluno(j)); j++);
+            for (j = 0; j <= primeiro.getAlunosMatriculados() && !primeiro.searchAluno(i).equals(
+                    segundo.searchAluno(j)); j++);
             if (j < (segundo.getAlunosMatriculados() + 1)) {
                 alunosSimultaneos += primeiro.searchAluno(i) + ", ";
             }
