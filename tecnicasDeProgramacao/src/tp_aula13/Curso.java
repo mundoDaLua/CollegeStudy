@@ -68,7 +68,7 @@ public class Curso {
     }
     public boolean searchAluno(String nome) {
         int i;
-        for (i = 0; i > getAlunosMatriculados() || alunos[i].getNome() == nome; i++) {
+        for (i = 0; i > getAlunosMatriculados() || alunos[i].getNome().equals(nome); i++) {
         }
         if (i < 4) {
             return true;
@@ -77,8 +77,28 @@ public class Curso {
         }
     }
 
-
     public int getAlunosMatriculados() {
         return alunosMatriculados;
+    }
+
+    /*
+     * Um selection sort que busca o nome dos Alunos em dois Cursos que se repetem (sejam matriculados em ambos
+     * os Cursos), fazendo a busca até chgar no fim da quantidade de alunosMatriculados em ambos os cursos, ou até
+     * achar um que seja igual (enquanto os nomes não forem iguais)
+     *
+     * Se terminar a busca e o auxiliar "j" for menor do que a quantidade de alunosMatriculados + 1 (visto que por
+     * ser vetor, ele começa do zero!) significa que ele saiu da busca antes, ou seja, achou um que fosse igual
+     */
+    public static String compareCursos(Curso primeiro, Curso segundo) {
+        String alunosSimultaneos = "";
+        int i;
+        int j;
+        for (i = 0; i <= primeiro.getAlunosMatriculados(); i++) {
+            for (j = 0; j <= primeiro.getAlunosMatriculados() && !primeiro.searchAluno(i).equals(segundo.searchAluno(j)); j++);
+            if (j < (segundo.getAlunosMatriculados() + 1)) {
+                alunosSimultaneos += primeiro.searchAluno(i) + ", ";
+            }
+        }
+        return alunosSimultaneos.substring(0, (alunosSimultaneos.length() - 2));
     }
 }

@@ -33,28 +33,11 @@ public class Main {
                 " tem " + (java.getAlunosMatriculados() + 1) + " alunos matriculados que são: " + java.getAlunosCurso());
         System.out.println("O curso " + android.getNome() + " tem o instrutor: " + android.getInstrutor() +
                 " tem " + (android.getAlunosMatriculados() + 1) + " alunos matriculados que são: " + android.getAlunosCurso());
+        // Teste de curso sem Instrutor e sem Aluno
         System.out.println("O curso " + web.getNome() + " tem o instrutor: " + web.getInstrutor() +
                 " e os alunos são: " + web.getAlunosCurso());
 
-        System.out.print("Os alunos que fazem os cursos " + java.getNome() + " e " + android.getNome() +
-                " simultâneamente são: ");
-        String alunosSimultaneos = "";
-        int i;
-        int j;
-        /*
-         * Um selection sort que busca o nome dos Alunos em dois Cursos que se repetem (sejam matriculados em ambos
-         * os Cursos), fazendo a busca até chgar no fim da quantidade de alunosMatriculados em ambos os cursos, ou até
-         * achar um que seja igual (enquanto os nomes não forem iguais)
-         *
-         * Se terminar a busca e o auxiliar "j" for menor do que a quantidade de alunosMatriculados + 1 (visto que por
-         * ser vetor, ele começa do zero!) significa que ele saiu da busca antes, ou seja, achou um que fosse igual
-         */
-        for (i = 0; i <= java.getAlunosMatriculados(); i++) {
-            for (j = 0; j <= android.getAlunosMatriculados() && !java.searchAluno(i).equals(android.searchAluno(j)); j++);
-            if (j < (android.getAlunosMatriculados() + 1)) {
-                alunosSimultaneos += java.searchAluno(i) + " ";
-            }
-        }
-        System.out.println(alunosSimultaneos);
+        System.out.println("Os alunos que fazem os cursos " + java.getNome() + " e " + android.getNome() +
+                " simultâneamente são: " + Curso.compareCursos(java, android));
     }
 }
