@@ -1,0 +1,37 @@
+Data: 27-03-2020
+
+Conteudo:
+
+Crie um programa em Java que implemente as seguintes classes
+
+Curso
+    private String nomeCurso
+    private String cargaHoraria
+    get/set
+
+Aluno
+    private String nomeAluno
+    private String matricula
+    get/set
+
+Instrutor
+    private String nomeInstrutor
+    get/set
+
+Sabe-se que:
+    Um curso tem 4 alunos(ARRAYLIST)
+    Um curso tem 1 instrutor
+
+a) Criar um curso de Java de 30h oferecido pelo instrutor Felipe
+b) Criar um curso de Android de 20h oferecido pelo instrutor Ivan
+c) Criar os alunos e respectivas matrículas nos seguintes cursos (ARRAYLIST):
+
+JAVA, carga horária de 30h      Android, carga horária de 20h
+Ana         -   1001	        Ana         -   1001
+José        -   1002            José        -   1002
+Nelson      -   1003            Thais       -   1005
+Jaqueline   -   1004            John        -   1006
+
+d) Mostrar os nomes e matrículas de todos os alunos que fazem o curso de Java (imprima o nome do instrutor também)
+e) Mostrar os nomes e matrículas de todos os alunos que fazem o curso de Android (imprima o nome do instrutor também)
+f) Mostrar os nomes e matrículas de todos os alunos que fazem os dois cursos
