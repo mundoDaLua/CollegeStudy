@@ -9,7 +9,7 @@ public class Curso {
     private int alunosMatriculados;
 
     /*
-     * Construtor padrão de um Curso, que nao tem alunos matriculados
+     * Construtor de um Curso, que nao tem alunos matriculados
      * O instrutor não é obrigatorio
      * O tamanhoTurma é, por padrão, 4
      */
