@@ -5,12 +5,13 @@ public class Curso {
     private String nome;
     private int cargaHoraria;
     private Instrutor instrutor;
-    private Aluno[] alunos = new Aluno[4];
+    private Aluno[] alunos;
     private int alunosMatriculados;
 
     public Curso(String nome, int cargaHoraria) {
         setNome(nome);
         setCargaHoraria(cargaHoraria);
+        alunos = new Aluno[4];
         setInstrutor(null);
         setAlunos(null);
         alunosMatriculados = -1;
