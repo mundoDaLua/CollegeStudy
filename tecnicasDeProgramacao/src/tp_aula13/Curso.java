@@ -8,13 +8,46 @@ public class Curso {
     private Aluno[] alunos;
     private int alunosMatriculados;
 
+    /*
+     * Construtor padrão de um Curso, que nao tem alunos matriculados
+     * O instrutor não é obrigatorio
+     * O tamanhoTurma é, por padrão, 4
+     */
     public Curso(String nome, int cargaHoraria) {
         setNome(nome);
         setCargaHoraria(cargaHoraria);
-        alunos = new Aluno[4];
         setInstrutor(null);
-        setAlunos(null);
+        setTurma(4);
         alunosMatriculados = -1;
+        setAlunos(null);
+    }
+
+    /*
+     * Construtor de um Curso, sem alunos matriculados
+     * Tem um instrutor definido na chamada
+     * O tamanhoTurma é 4 por padrão
+     */
+    public Curso(String nome, int cargaHoraria, Instrutor instrutor) {
+        setNome(nome);
+        setCargaHoraria(cargaHoraria);
+        setInstrutor(instrutor);
+        setTurma(4);
+        alunosMatriculados = -1;
+        setAlunos(null);
+    }
+
+    /*
+     * Construtor de um Curso com, sem alunos
+     * Tem um instrutor definido na chamada
+     * Tem o tamanhoTurma escolhido na chamada
+     */
+    public Curso(String nome, int cargaHoraria, Instrutor instrutor, int tamanhoTurma) {
+        setNome(nome);
+        setCargaHoraria(cargaHoraria);
+        setInstrutor(instrutor);
+        setTurma(tamanhoTurma);
+        alunosMatriculados = -1;
+        setAlunos(null);
     }
 
     public String getNome() {
@@ -66,6 +99,17 @@ public class Curso {
         }
     }
 
+    public int getAlunosMatriculados() {
+        return alunosMatriculados;
+    }
+    public void setAlunosMatriculados(int alunosMatriculados) {
+        this.alunosMatriculados = alunosMatriculados;
+    }
+
+    public void setTurma(int tamanhoTurma) {
+        alunos = new Aluno[tamanhoTurma];
+    }
+
     public String searchAluno(int i) {
         return alunos[i].getNome();
     }
@@ -78,10 +122,6 @@ public class Curso {
         } else {
             return false;
         }
-    }
-
-    public int getAlunosMatriculados() {
-        return alunosMatriculados;
     }
 
     /*
