@@ -1,4 +1,4 @@
-package tp_aula13;
+package tp_aula13.curso;
 
 public class Instrutor {
 
