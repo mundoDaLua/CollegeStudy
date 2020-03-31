@@ -2,7 +2,7 @@ package tp_aula03;
 
 import java.util.Scanner;
 
-public class MODEL_MenuAndChoices {
+public class Menu {
 
     static int option;
 
