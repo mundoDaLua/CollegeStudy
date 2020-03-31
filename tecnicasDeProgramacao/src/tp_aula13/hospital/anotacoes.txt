@@ -1,0 +1,23 @@
+Data: 27-03-2020
+
+Conteudo:
+
+Crie um programa em Java que implemente as seguintes classes:
+
+Hospital
+    private String nome
+    construtor
+    get/set
+
+Paciente
+    private String nome
+    private String doença
+    construtor
+    get/set
+
++ Sabe-se que um hospital pode suportar 5 pacientes (tem 5 pacientes). Use um ArrayList de pacientes.
++ Declare o ArrayList na classe do Hospital e use o construtor do Hospital para inicializar o ArrayList com
+    o operador new.
++ Escreva um programa que leia o nome e a doença de 5 pacientes do teclado e os coloque no ArrayList do hospital
+    “Albert Einsten”.
++ Liste os pacientes com suas respectivas doenças
