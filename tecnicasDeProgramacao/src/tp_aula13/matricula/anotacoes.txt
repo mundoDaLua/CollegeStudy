@@ -1,0 +1,21 @@
+Data: 27-03-2020
+
+Conteudo:
+
+Crie um programa em Java que implemente as seguintes classes
+
+Aluno
+    private String nome
+    public Aluno(String Nome, ArayList<Materia> Materias)
+    get/set
+
+Materia
+    private String nome
+    Materia (String nome)
+    get/set
+
++ Sabe-se que cada aluno se matricula em três matérias. Declare na classe aluno, um ArrayList da classe matéria
+    e use o construtor do Aluno para inicializar o ArrayList fornecido pelo usuário.
++ Escreva um programa que leia o nome de 4 alunos e suas respectivas três matérias.
++ Para os alunos, use um ArrayList no programa principal (listaAlunos).
++ Imprima os nomes dos alunos e suas respectivas matérias.
