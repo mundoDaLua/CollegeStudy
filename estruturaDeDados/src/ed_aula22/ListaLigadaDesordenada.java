@@ -55,6 +55,9 @@ public class ListaLigadaDesordenada {
     }
 
     /*
+     *
+     * IMPLEMENTAÇÃO AINDA NAO FUNCIONANDO!!!
+     *
      * Verifica se a ListaLigadaDesordenada está vazia
      * Se estiver, retorna um erro
      * Caso contrario, cria Nodes auxiliares (i == frutaAtual, j == frutaAnterior) e Fruta auxiliar (frutaDeletada) para encontrar a Fruta fruta
