@@ -86,7 +86,7 @@ public class ListaLigadaDesordenada {
         Fruta frutaDeletada;
 
         for (frutaAtual = this.fruta, frutaAnterior = this.fruta;
-             frutaAtual == null && frutaAtual.getAtual().getNome().equals(fruta.getNome());
+             frutaAtual != null && !frutaAtual.getAtual().getNome().equals(fruta.getNome());
              frutaAnterior = frutaAtual, frutaAtual = frutaAtual.getProximo());
 
         if (frutaAtual == null) {
