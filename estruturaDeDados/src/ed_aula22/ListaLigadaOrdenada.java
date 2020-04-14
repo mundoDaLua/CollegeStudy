@@ -1,21 +1,21 @@
 package ed_aula22;
 
-public class ListaLigadaDesordenada {
+public class ListaLigadaOrdenada {
 
     private Node fruta;
     private int tamanho;
 
-    // Retorna o tamanho da ListaLigadaDesordenada
+    // Retorna o tamanho da ListaLigadaOrdenada
     public int getTamanho() {
         return tamanho;
     }
 
-    // Verifica se a ListaLigadaDesordenada está vazia
+    // Verifica se a ListaLigadaOrdenada está vazia
     public boolean isEmpity() {
         return fruta == null;
     }
 
-    // Busca uma fruta na ListaLigadaDesordenada
+    // Busca uma fruta na ListaLigadaOrdenada
     public Fruta search(Fruta fruta) {
         if (isEmpity()) {
             return null;
@@ -30,12 +30,12 @@ public class ListaLigadaDesordenada {
     }
 
     /*
-     * Procura se a Fruta jaTinha na ListaLigadaDesordenada
+     * Procura se a Fruta jaTinha na ListaLigadaOrdenada
      * Se encontrar, retorna um Erro
      * Caso contrario, constroi um Node novo da novaFruta
-     * Se a ListaLigadaDesordenada estiver vazia, atribui o Node novo ao inicio
+     * Se a ListaLigadaOrdenada estiver vazia, atribui o Node novo ao inicio
      * Caso contrario, Atribui o Node novo ao Node proximo do novo, para ele sempre referenciar o Node que vinha antes
-     * Atribui o Node novo ao fruta da ListaLigadaDesordenada
+     * Atribui o Node novo ao fruta da ListaLigadaOrdenada
      * Aumenta em uma unidade o tamanho
      */
     public void add(Fruta novaFruta) {
@@ -58,44 +58,54 @@ public class ListaLigadaDesordenada {
      *
      * IMPLEMENTAÇÃO AINDA NAO FUNCIONANDO!!!
      *
-     * Verifica se a ListaLigadaDesordenada está vazia
+     * Verifica se a ListaLigadaOrdenada está vazia
      * Se estiver, retorna um erro
-     * Caso contrario, cria Nodes auxiliares (i == frutaAtual, j == frutaAnterior) e Fruta auxiliar (frutaDeletada) para encontrar a Fruta fruta
-     * Se a busca nao encontrar (i == null) retorna null
-     * Se a busca encontrar (fruta.nome == i.atual.nome) a frutaDeletada recebe i.atual
+     * Caso contrario, cria Nodes auxiliares (frutaAtual e frutaAnterior) e Fruta auxiliar (frutaDeletada) para
+     * encontrar a Fruta fruta
+     * Se a busca nao encontrar (frutaAtual == null) retorna null
+     * Se a busca encontrar (fruta.nome == frutaAtual.atual.nome) a frutaDeletada recebe frutaAtual.atual
      *
-     * Na terceira parte do metodo delete, faz o tratamento para que a ListaLigadaDesordenada nao tenha "buracos"
+     * Na terceira parte do metodo delete, faz o tratamento para que a ListaLigadaOrdenada nao tenha "buracos"
      * pois caso tenham espaços vazios, as Frutas deixam de estar ligadas, parando de funcionar a classe
      * Se os Node auxiliares forem iguais, a this.fruta vai passar a referenciar a this.fruta.proximo
      * Caso contrario, a Fruta anterior passa a apontar para a frutaAtual
-     * Reduz o tamanho da ListaLigadaDesordenada em uma unidade
+     * Reduz o tamanho da ListaLigadaOrdenada em uma unidade
      * Retorna a frutaDeletada
      */
-    public Fruta delete(Fruta fruta) {
+    private Fruta deleteFruta(Fruta fruta) {
         if (isEmpity()) {
             return null;
         }
 
-        Node i;
-        Node j;
+        Node frutaAtual;
+        Node frutaAnterior;
         Fruta frutaDeletada;
-        for (i = this.fruta, j = this.fruta; i != null && !fruta.getNome().equals(i.getAtual().getNome());
-             j = i, i = i.getProximo());
-        if (i == null) {
+
+        for (frutaAtual = this.fruta, frutaAnterior = this.fruta;
+             frutaAtual == null && frutaAtual.getAtual().getNome().equals(fruta.getNome());
+             frutaAnterior = frutaAtual, frutaAtual = frutaAtual.getProximo());
+
+        if (frutaAtual == null) {
             return null;
         }
-        frutaDeletada = i.getAtual();
+        frutaDeletada = frutaAtual.getAtual();
 
-        if (i == j) {
+        if (frutaAtual == frutaAnterior) {
             this.fruta = this.fruta.getProximo();
         } else {
-            j.setProximo(i.getProximo());
+            frutaAnterior.setProximo(frutaAtual.getProximo());
         }
+
         tamanho--;
         return frutaDeletada;
     }
 
-    // Informa todas as Frutas presentes na ListaLigadaDesordenada
+    // Retorna o nome da fruta deletada
+    public String delete(Fruta fruta) {
+        return deleteFruta(fruta).getNome();
+    }
+
+    // Informa todas as Frutas presentes na ListaLigadaOrdenada
     public String print() {
         if (isEmpity()) {
             return "Lista Vazia";
