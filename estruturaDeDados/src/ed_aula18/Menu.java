@@ -1,4 +1,4 @@
-package ed_aula19;
+package ed_aula18;
 
 import ed_aula11.Item;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ public class Menu {
 
     private int opcao;
 
-    private FilaEncadeada fila = new FilaEncadeada();
+    private PilhaAutorreferenciada pilha = new PilhaAutorreferenciada();
     private Scanner sc = new Scanner(System.in);
 
     public int getOpcao() {
@@ -18,31 +18,24 @@ public class Menu {
         System.out.println("\nAdicionando uma nova Item...");
         System.out.println("Qual o Item a ser adicionada?");
         Item item = new Item(sc.next());
-        fila.add(item);
+        pilha.push(item);
         System.out.println(item.getDescricao() + " adicionada com sucesso!");
     }
 
     private void remover() {
-        System.out.println("\nRemovendo uma o primeiro Item da Fila...");
-        String itemRemovido = fila.remove();
+        System.out.println("\nRemovendo uma o ultimo Item da Pilha...");
+        String itemRemovido = pilha.pop();
         if (itemRemovido != null) {
             System.out.println(itemRemovido + " Removido com sucesso");
         } else {
-            System.out.println("Fruta não está presente na Lista!");
+            System.out.println("Fruta não está presente na Pilha!");
         }
-    }
-
-
-    private void mostrar() {
-        System.out.println("\nMostrando o primeiro Item da Fila...");
-        System.out.println(fila.peek());
     }
 
     public void menu() {
         System.out.println("\n##################################");
         System.out.println("# 1. Adicionar novo Item         #");
         System.out.println("# 2. Remover Item                #");
-        System.out.println("# 3. Mostrar Item sem Remover    #");
         System.out.println("# 0. SAIR                        #");
         System.out.println("##################################");
         System.out.println("\nDigite um dos numeros do Menu acima para selecionar uma opção: ");
@@ -61,9 +54,6 @@ public class Menu {
                 break;
             case 2:
                 remover();
-                break;
-            case 3:
-                mostrar();
                 break;
             default:
                 System.out.println("Opção invalida, digite novemente...\n");
