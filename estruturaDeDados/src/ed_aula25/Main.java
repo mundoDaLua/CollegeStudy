@@ -11,7 +11,5 @@ public class Main {
             menu.escolha();
         } while (menu.getOpcao() != 0);
 
-
     }
-
 }
