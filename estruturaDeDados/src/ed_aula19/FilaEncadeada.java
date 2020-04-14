@@ -67,9 +67,9 @@ public class FilaEncadeada {
     public String remove() {
         try {
             Item itemAntigo = removeItem();
-            return "    Nome: " + itemAntigo.getDescricao() +
-                    "\n    Quantidade: " + itemAntigo.getQuantidade() +
-                    "\n    Prioridade: " + itemAntigo.getPrioridade();
+            return "    Nome: " + itemAntigo.getDescricao(); //+
+                    //"\n    Quantidade: " + itemAntigo.getQuantidade() +
+                    //"\n    Prioridade: " + itemAntigo.getPrioridade();
         } catch (Exception e) {
             return "    Erro: A fila está vazia.";
         }
@@ -87,9 +87,9 @@ public class FilaEncadeada {
     public String peek() {
         try {
             Item itemAtual = peekItem();
-            return "    Nome: " + itemAtual.getDescricao() +
-                    "\n    Quantidade: " + itemAtual.getQuantidade() +
-                    "\n    Prioridade: " + itemAtual.getPrioridade();
+            return "    Nome: " + itemAtual.getDescricao(); //+
+                    //"\n    Quantidade: " + itemAtual.getQuantidade() +
+                    //"\n    Prioridade: " + itemAtual.getPrioridade();
         } catch (Exception e) {
             return "    Erro: A fila está vazia.";
         }
