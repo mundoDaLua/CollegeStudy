@@ -1,13 +1,12 @@
-package ed_aula19;
+package ed_aula10;
 
-import ed_aula11.Item;
 import java.util.Scanner;
 
 public class Menu {
 
     private int opcao;
 
-    private FilaEncadeada fila = new FilaEncadeada();
+    private FilaVetor fila = new FilaVetor();
     private Scanner sc = new Scanner(System.in);
 
     public int getOpcao() {
@@ -15,15 +14,15 @@ public class Menu {
     }
 
     private void adicionar() {
-        System.out.println("\nAdicionando um novo Item...");
-        System.out.println("Qual o Item a ser adicionada?");
-        Item item = new Item(sc.next());
-        fila.add(item);
-        System.out.println(item.getDescricao() + " adicionada com sucesso!");
+        System.out.println("\nAdicionando uma nova Pessoa...");
+        System.out.println("Qual o nome da Pessoa a ser adicionada?");
+        Pessoa pessoa = new Pessoa(sc.next());
+        fila.add(pessoa);
+        System.out.println(pessoa.getNome() + " adicionada com sucesso!");
     }
 
     private void remover() {
-        System.out.println("\nRemovendo o primeiro Item da Fila...");
+        System.out.println("\nRemovendo a primeira Pessoa da Fila...");
         String itemRemovido = fila.remove();
         if (itemRemovido != null) {
             System.out.println(itemRemovido + " Removido com sucesso");
@@ -32,17 +31,16 @@ public class Menu {
         }
     }
 
-
     private void mostrar() {
-        System.out.println("\nMostrando o primeiro Item da Fila...");
+        System.out.println("\nMostrando a primeira Pessoa da Fila...");
         System.out.println(fila.peek());
     }
 
     public void menu() {
-        System.out.println("\n##################################");
-        System.out.println("# 1. Adicionar novo Item         #");
-        System.out.println("# 2. Remover Item                #");
-        System.out.println("# 3. Mostrar Item sem Remover    #");
+        System.out.println("\n#################################");
+        System.out.println("# 1. Adicionar nova Pessoa       #");
+        System.out.println("# 2. Remover Pessoa              #");
+        System.out.println("# 3. Mostrar Pessoa sem Remover  #");
         System.out.println("# 0. SAIR                        #");
         System.out.println("##################################");
         System.out.println("\nDigite um dos numeros do Menu acima para selecionar uma opção: ");
