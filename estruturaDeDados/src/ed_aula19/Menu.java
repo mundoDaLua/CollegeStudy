@@ -16,10 +16,10 @@ public class Menu {
 
     private void adicionar() {
         System.out.println("\nAdicionando um novo Item...");
-        System.out.println("Qual o Item a ser adicionada?");
+        System.out.println("Qual o Item a ser adicionado?");
         Item item = new Item(sc.next());
         fila.add(item);
-        System.out.println(item.getDescricao() + " adicionada com sucesso!");
+        System.out.println(item.getDescricao() + " adicionado com sucesso!");
     }
 
     private void remover() {

@@ -15,11 +15,11 @@ public class Menu {
     }
 
     private void adicionar() {
-        System.out.println("\nAdicionando uma nova Item...");
-        System.out.println("Qual o Item a ser adicionada?");
+        System.out.println("\nAdicionando um novo Item...");
+        System.out.println("Qual o Item a ser adicionado?");
         Item item = new Item(sc.next());
         pilha.push(item);
-        System.out.println(item.getDescricao() + " adicionada com sucesso!");
+        System.out.println(item.getDescricao() + " adicionado com sucesso!");
     }
 
     private void remover() {
@@ -28,7 +28,7 @@ public class Menu {
         if (itemRemovido != null) {
             System.out.println(itemRemovido + " Removido com sucesso");
         } else {
-            System.out.println("Fruta não está presente na Pilha!");
+            System.out.println("Item não está presente na Pilha!");
         }
     }
 

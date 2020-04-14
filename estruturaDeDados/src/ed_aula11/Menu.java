@@ -19,7 +19,7 @@ public class Menu {
         Item item = new Item(sc.next());
         if (!lista.isFull()) {
             lista.add(item);
-            System.out.println(item.getDescricao() + " adicionada com sucesso!");
+            System.out.println(item.getDescricao() + " adicionado com sucesso!");
         } else {
             System.out.println("    Erro: " + item.getDescricao() + " não adicionado, pois a Lista está cheia!");
         }
@@ -27,10 +27,10 @@ public class Menu {
 
     private void remover() {
         System.out.println("\nRemovendo um Item da Lista...");
-        System.out.println("Qual o item a ser removida?");
+        System.out.println("Qual o item a ser removido?");
         Item itemRemovido = lista.delete(new Item(sc.next()));
         if (itemRemovido != null) {
-            System.out.println(itemRemovido.getDescricao() + " Removida com sucesso");
+            System.out.println(itemRemovido.getDescricao() + " Removido com sucesso");
         } else {
             System.out.println("Item não está presente na Lista!");
         }
@@ -38,17 +38,17 @@ public class Menu {
 
     private void buscar() {
         System.out.println("\nBuscando um Item na Lista...");
-        System.out.println("Qual p Item que você quer consultar?");
+        System.out.println("Qual o Item que você quer consultar?");
         Item item = lista.get(new Item(sc.next()));
         if (item != null) {
             System.out.println(item.getDescricao()+ " Presente na Lista!");
         } else {
-            System.out.println("Fruta não está presente na Lista!");
+            System.out.println("Item não está presente na Lista!");
         }
     }
 
     private void mostrar() {
-        System.out.println("\nMostrando todas as Frutas da Lista...");
+        System.out.println("\nMostrando todas os Itens da Lista...");
         System.out.println(lista.print());
     }
 

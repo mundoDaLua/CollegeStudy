@@ -18,14 +18,14 @@ public class Menu {
         System.out.println("Qual o nome da Pessoa a ser adicionada?");
         Pessoa pessoa = new Pessoa(sc.next());
         fila.add(pessoa);
-        System.out.println(pessoa.getNome() + " adicionada com sucesso!");
+        System.out.println(pessoa.getNome() + " adicionado(a) com sucesso!");
     }
 
     private void remover() {
         System.out.println("\nRemovendo a primeira Pessoa da Fila...");
-        String itemRemovido = fila.remove();
-        if (itemRemovido != null) {
-            System.out.println(itemRemovido + " Removido com sucesso");
+        String pessoaRemovida = fila.remove();
+        if (pessoaRemovida != null) {
+            System.out.println(pessoaRemovida + " Removida com sucesso");
         } else {
             System.out.println("Fila está vazia!");
         }
