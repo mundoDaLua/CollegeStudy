@@ -120,13 +120,18 @@ public class ListaDesordenadaVetor {
         }
     }
 
-    // Retorna qual Item está em uma determinada posicao na listaItem, sem remove-lo
-    public String print(int posicao) {
-        if (isEmpty() || posicao > finalLista) {
-            return null;
-        } else {
-            return listaItem[posicao].getItem();
+    // Retorna a lista de Item
+    public String print() {
+        String lista = "[";
+        for (int i = 0; i <= tamanhoLista; i++) {
+            if (i < tamanhoLista) {
+                lista += " " + listaItem[i].getDescricao() + ",";
+            } else {
+                lista += " " + listaItem[i].getDescricao();
+            }
         }
+        lista += " ]";
+        return lista;
     }
 
     // Realiza uma modificação direta em um Item na listaItem (substitui os atributos do antigo pelos do novo)
