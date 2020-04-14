@@ -5,8 +5,8 @@ public class Node {
     private Fruta atual;
     private Node proximo;
 
-    public Node(Fruta fruta) {
-        setAtual(fruta);
+    public Node(Fruta nova) {
+        setAtual(nova);
         setProximo(null);
     }
 
