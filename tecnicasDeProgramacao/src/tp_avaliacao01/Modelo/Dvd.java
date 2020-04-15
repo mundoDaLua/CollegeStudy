@@ -17,12 +17,15 @@ public class Dvd extends Midia {
         String box = "[ ";
         for (int i = 0; i < this.box.size(); i++) {
             if (i < this.box.size() - 1) {
-                box += this.box.get(i) + ", ";
+                box += this.box.get(i).getTitulo() + ", ";
             } else {
-                box += this.box.get(i) + " ]";
+                box += this.box.get(i).getTitulo() + " ]";
             }
+
         }
-        System.out.print(" [ Nome: " + super.getNome() + ", Distribuidos no(s) Box(s)  " + box + ", Artista: " + super.getArtista() + ", Duração: " + duracao +
-                ", Preço: " + super.getPreco() + ", Status: " + super.getStatus() + " ]");
+        System.out.println("TAMANHO DO BOX: " + this.box.size());
+        System.out.print(" [ Nome: " + super.getNome() + ", Distribuidos no(s) Box(s): " + box + ", Artista: " +
+                super.getArtista() + ", Duração: " + duracao + ", Preço: " + super.getPreco() + ", Status: " +
+                super.getStatus() + " ]");
     }
 }

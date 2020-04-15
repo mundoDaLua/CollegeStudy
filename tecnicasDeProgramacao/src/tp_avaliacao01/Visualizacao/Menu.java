@@ -57,12 +57,14 @@ public class Menu {
         System.out.println("Qual o nome do DVD?");
         String nome = sc.next();
         System.out.println("O DVD está contido em quantos BOX?");
+        int qtdBox = sc.nextInt();
         ArrayList<Box> listaBox = new ArrayList<Box>();
-        for (int i = 1; i <= sc.nextInt(); i++) {
+        for (int i = 1; i <= qtdBox; i++) {
             System.out.println("Qual o titulo do BOX de numero " + i + "?");
             String titulo = sc.next();
             Box box = new Box();
             box.setTitulo(titulo);
+            listaBox.add(box);
         }
         System.out.println("Qual o Artista do DVD?");
         String artista = sc.next();
@@ -99,7 +101,7 @@ public class Menu {
 
         if (!listaDvd.isEmpty()) {
             System.out.println("\nOs DVDs são: ");
-            for (int i = 0; i < listaLivro.size(); i++) {
+            for (int i = 0; i < listaDvd.size(); i++) {
                 listaDvd.get(i).getDvd();
             }
         } else {
