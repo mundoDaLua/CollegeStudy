@@ -1,0 +1,73 @@
+Data: 14-04-2020 (Aula 17)
+
+Conteudo:
+
+Crie um programa em Java que implemente a seguinte herança definida no Diagrama de Classes:
+
+Produto
+    private String nome
+    private double preco
+    private String status
+    public Produto()
+    public Produto(nome, preco, status)
+    protected String getNome()
+    protected double getPreco()
+    protected String getStatus()
+
+Produto.Livro
+    String autor
+    int paginas
+    Livro(autor, paginas, nome, preco, status)
+    protected void getLivro()
+
+Produto.Midia
+    String artista
+    Midia(artista, nome, preco, status)
+    protected String getArtista()
+
+Produto.Midia.Cd
+    int faixas
+    Cd(faixas, artista, nome, preco, status)
+    protected void getCd()
+
+Produto.Midia.Dvd
+    int duracao
+    ArrayList<Box> box
+    Dvd(duracao, artista, nome, preco, status, box)
+    protected void getDvd()
+
+Box
+    String titulo
+    void setTitulo(String titulo)
+    String getTitulo()
+
+
+Onde status pode apresentar os seguintes valores: “Promocao”, “BestSeller”, “Indisponível”;
+
+Crie um menu que permita as seguintes operações:
+
+#########################
+#  1 -Add Livro                          #
+#  2- Add CD                             #
+#  3- Add DVD                          #
+#  4- Listar Produtos                 #
+#  9- Sair                                   #
+#########################
+
+Crie três ArrayLists no programa principal do tipo Produto:
+ArrayList<Produto> livros
+ArrayList<Produto> cds
+ArrayList<Produto> dvs
+
+Implemente, para cada uma das operações, um método estático que resulte nas respectivas operações de adicionar um
+produto do tipo livro, cd e dvd. Além de um método estático que imprima todas as informações de todos os produtos
+cadastrados (nos três ArrayLists).
+
+Observação 1 : dado que DVD possui uma associação com Box, no cadastro de um DVD o usuário deve ser questionado em
+quantos box o DVD será distribuído, para que possa digitar o nome de todos eles.
+
+Observação 2: somente implementem os métodos descritos no diagrama de classes.
+
+Observação 3: Quando forem imprimir usem Downcasting se precisarem, e testem se os arraylists estão ou não vazios.
+
+Observação 4: DICA – para imprimir, utilize os métodos getCD(), getDVD, getLivro().
