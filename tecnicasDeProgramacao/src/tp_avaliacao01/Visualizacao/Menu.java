@@ -85,6 +85,7 @@ public class Menu {
             System.out.println("Os Livros são: ");
             for (int i = 0; i < listaLivro.size(); i++) {
                 listaLivro.get(i).getLivro();
+                System.out.println("");
             }
         } else {
             System.out.println("Não há Livros Cadastrados...");
@@ -94,6 +95,7 @@ public class Menu {
             System.out.println("\nOs CDs são: ");
             for (int i = 0; i < listaCd.size(); i++) {
                 listaCd.get(i).getCd();
+                System.out.println("");
             }
         } else {
             System.out.println("\nNão há CDs Cadastrados...");
@@ -103,6 +105,7 @@ public class Menu {
             System.out.println("\nOs DVDs são: ");
             for (int i = 0; i < listaDvd.size(); i++) {
                 listaDvd.get(i).getDvd();
+                System.out.println("");
             }
         } else {
             System.out.println("\nNão há DVDs Cadastrados...");
