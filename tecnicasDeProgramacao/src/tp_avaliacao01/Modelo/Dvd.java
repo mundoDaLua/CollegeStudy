@@ -10,10 +10,19 @@ public class Dvd extends Midia {
     public Dvd(int duracao, String artista, String nome, double preco, String status, ArrayList<Box> box) {
         super(artista, nome, preco, status);
         this.duracao = duracao;
+        this.box = box;
     }
 
     public void getDvd() {
-        System.out.print(" [ Nome: " + super.getNome() + ", Artista: " + super.getArtista() + ", Duração: " + duracao +
+        String box = "[ ";
+        for (int i = 0; i < this.box.size(); i++) {
+            if (i < this.box.size() - 1) {
+                box += this.box.get(i) + ", ";
+            } else {
+                box += this.box.get(i) + " ]";
+            }
+        }
+        System.out.print(" [ Nome: " + super.getNome() + ", Distribuidos no(s) Box(s)  " + box + ", Artista: " + super.getArtista() + ", Duração: " + duracao +
                 ", Preço: " + super.getPreco() + ", Status: " + super.getStatus() + " ]");
     }
 }
