@@ -23,7 +23,6 @@ public class Dvd extends Midia {
             }
 
         }
-        System.out.println("TAMANHO DO BOX: " + this.box.size());
         System.out.print(" [ Nome: " + super.getNome() + ", Distribuidos no(s) Box(s): " + box + ", Artista: " +
                 super.getArtista() + ", Duração: " + duracao + ", Preço: " + super.getPreco() + ", Status: " +
                 super.getStatus() + " ]");
