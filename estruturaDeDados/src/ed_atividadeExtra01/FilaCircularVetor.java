@@ -47,7 +47,7 @@ public class FilaCircularVetor {
     public void add(Objeto objeto) {
         if (!isFull()) {
             filaObjeto[finalFila] = objeto;
-            finalFila++;
+            finalFila = (finalFila + 1) % tamanhoFila;
         } else {
             System.out.println("Objeto " + objeto.getNome() + " não adicionado, pois a fila está cheia!");
         }
@@ -57,11 +57,8 @@ public class FilaCircularVetor {
     public Objeto remove() throws Exception {
         if (!isEmpty()) {
             Objeto objeto = filaObjeto[inicoFila];
-            for (int i = (inicoFila + 1); i < finalFila; i++) {
-                filaObjeto[i - 1] = filaObjeto[i];
-                filaObjeto[i] = null;
-            }
-            finalFila--;
+            filaObjeto[inicoFila] = null;
+            inicoFila = (inicoFila + 1) % tamanhoFila;
             return objeto;
         } else {
             throw new Exception("Erro: A fila está vazia.");
