@@ -12,10 +12,10 @@ public class Funcionario {
 
     // Por conta do modelo MVC tive que deixar todos os metodos publicos, até tem como acessar protected de
     // outros pacotes, mas nao tive tempo de estudar como...
-    public String getNome() {
+    protected String getNome() {
         return nome;
     }
-    public String getCodigo() {
+    protected String getCodigo() {
         return codigo;
     }
 }

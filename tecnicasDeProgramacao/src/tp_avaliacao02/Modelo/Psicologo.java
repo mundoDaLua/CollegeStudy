@@ -14,7 +14,7 @@ public class Psicologo extends Funcionario {
 
     // Por conta do modelo MVC tive que deixar todos os metodos publicos, até tem como acessar protected de
     // outros pacotes, mas nao tive tempo de estudar como...
-    public int getCrp() {
+    protected int getCrp() {
         return crp;
     }
 
