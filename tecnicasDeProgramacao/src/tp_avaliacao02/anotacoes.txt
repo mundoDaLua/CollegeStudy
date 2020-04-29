@@ -1,0 +1,66 @@
+Data: 28-04-2020 (Aula 20)
+
+Conteúdo:
+
+Crie um programa em Java que implemente a seguinte herança definida no Diagrama de Classes:
+
+Funcionario
+    private String nome
+    private String codigo
+    protected String getNome()
+    protected String getCodigo()
+    public Funcionario(nome, codigo)
+
+Consulta
+    private String pacienteNome
+    private String hora
+    protected String getPacienteNome()
+    protected String getHora()
+    public Consulta(pacienteNome, hora)
+
+Psicologo extends Funcionario
+    private int crp
+    private ArrayList<Consulta> agenda
+    protected int getCrp()
+    protected ArrayList<Consulta> getAgenda()
+    protected void setAgenda(ArrayList<Consulta>)
+    public Psicologo(crp, nome, codigo)
+
+Medico extends Funcionario
+    private int crm
+    private ArrayList<Consulta> agenda
+    protected int getCrm()
+    protected ArrayList<Consulta> getAgenda()
+    protected void setAgenda(ArrayList<Consulta>)
+    public Medico(crm, nome, codigo)
+
+
+Crie um menu que permita as seguintes operações:
+
+#########################
+#  1-Cadastrar Doutor   #
+#  2-Agendar            #
+#  3-Consulta Agenda    #
+#  9-Sair               #
+#########################
+Opcao:
+
+
+Crie dois Funcionarios no programa principal e suas respectivas agendas:
+        Funcionario medico=null, psicologo=null;
+        ArrayList<Consultas> agendaMedico = new ArrayList<Consultas>();
+        ArrayList<Consultas> agendaPsicologo = new ArrayList<Consultas>();
+
+
+
+
+Implemente, para cada uma das operações, um método estático que resulte nas respectivas operações de Cadastrar um
+Doutor (médico ou psicólogo), um método estático para agendar uma consulta na agenda de um dos Funcionários e um
+método para imprimir os dados dos Funcionários e suas respectivas agendas.
+
+Observação 1: implementem SOMENTE os métodos descritos no diagrama de classes.
+
+Observação 3: Quando forem imprimir usem Downcasting se precisarem, e testem se os arraylists estão ou não vazios.
+Podem usar VETORES no lugar dos ArrayLists
+
+Observação 4: DICA – para imprimir, utilize os métodos GET.
