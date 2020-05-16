@@ -1,4 +1,4 @@
-package tp_aula24;
+package tp_aula24.modelo;
 
 import java.text.DecimalFormat;
 
@@ -34,7 +34,7 @@ public class Circulo implements FormaGeometrica {
 
     @Override
     public String getFormaGeometrica() {
-        return "{\n        Perimetro: " + decimal.format(perimetro) +
-                ",\n        Area: " + decimal.format(area) + "\n    }";
+        return "{\n        Perimetro Circulo: " + decimal.format(perimetro) +
+                "\n        Area Circulo: " + decimal.format(area) + "\n    }";
     }
 }

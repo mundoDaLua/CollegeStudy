@@ -1,4 +1,4 @@
-package tp_aula24;
+package tp_aula24.modelo;
 
 public interface FormaGeometrica {
 

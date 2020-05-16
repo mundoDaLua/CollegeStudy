@@ -1,4 +1,4 @@
-package tp_aula24;
+package tp_aula24.modelo;
 
 import java.text.DecimalFormat;
 
@@ -44,13 +44,5 @@ public abstract class Quadrilatero implements FormaGeometrica {
     public double calculaPerimetro() {
         perimetro = getLado1() + getLado2() +getLado3() + getLado4();
         return perimetro;
-    }
-
-    public abstract double getArea();
-
-    @Override
-    public String getFormaGeometrica() {
-        return "{\n        Perimetro: " + decimal.format(getPerimetro()) +
-                ",\n        Area: " + decimal.format(getArea()) + "\n    }";
     }
 }

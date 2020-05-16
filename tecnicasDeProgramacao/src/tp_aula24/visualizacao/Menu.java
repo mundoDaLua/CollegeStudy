@@ -1,4 +1,9 @@
-package tp_aula24;
+package tp_aula24.visualizacao;
+
+import tp_aula24.modelo.Circulo;
+import tp_aula24.modelo.FormaGeometrica;
+import tp_aula24.modelo.Quadrado;
+import tp_aula24.modelo.Retangulo;
 
 import java.util.ArrayList;
 import java.util.Scanner;
