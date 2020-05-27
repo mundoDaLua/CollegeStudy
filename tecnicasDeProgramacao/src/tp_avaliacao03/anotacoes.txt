@@ -1,0 +1,62 @@
+Data: 26-05-2020 (Aula 27)
+
+Conteúdo:
+
+Crie uma classe abstrata chamada Veiculo com dois atributos privados: string tipo e string motor. Implemente os
+métodos GET (somente) e o construtor dessa classe.
+
+Crie uma interface chamada EmissaoCO2 com um método chamado calculaCO2.
+
+Crie três classes concretas que herdam de Veiculo e implementam a interface EmissaoCO2 :
+	- Classe Carro
+	- Classe Barco
+	- Classe Bicicleta
+
+Cada uma das classes apresentam dois atributos privados: double quilometragem e double indice;
+Crie os métodos GET (somente) para todas as três classes.
+
+Para as três classes, implemente o método calculaCO2 retornando um valor double igual à Quilometragem x indice (polimorfismo).
+
+Para o programa principal:
+ - Peça ao usuário a quantidade de veículos a serem criados.
+ - Em seguida, pergunte para cada veículo a ser cadastrado se é um carro, um barco ou uma bicicleta. Considere o uso
+  de switch/case. Cadastre os veículos, um a um, em um ArrayList chamado Lista.
+ - Cadastre cada um, declarando-os como Veiculo. Ex.: Veiculo c = new Carro ( tipo, motor, quilometragem, 1.24 )
+ - Considere fixos os seguintes índices (para cálculo de emissão de CO2):
+	- Carro: 1.24
+	- Barco: 0.23
+	- Bicicleta: 0.0
+
+- Crie um método estático, passando o arraylist como parâmetros e imprima os dados de cada veículo.
+
+Exemplo de saída após 5 veículos cadastrados:
+
+1 - Carro:
+Tipo  :Gasolina
+Motor :1.0
+KM    :100.0
+Emissão de CO2: 124.0 KG/mes
+
+2 - Barco:
+Tipo  :Diesel
+Motor :200
+KM    :200.0
+Emissão de CO2: 46.0 KG/mes
+
+3 - Bicicleta:
+Tipo  :Eletrica
+Motor :50
+KM    :50.0
+Emissão de CO2: 0.0 KG/mes
+
+4 - Carro:
+Tipo  :Alcool
+Motor :1.4
+KM    :500.0
+Emissão de CO2: 620.0 KG/mes
+
+5 - Bicicleta:
+Tipo  :Normal
+Motor :0
+KM    :60.0
+Emissão de CO2: 0.0 KG/mes
