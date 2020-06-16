@@ -27,7 +27,7 @@ public class ListaDuplamenteLigada {
     // Busca Linear da esquerda para a direita na ListaDuplamenteLigada
     public Item search(Item item) throws Exception {
         if (isEmpity()) {
-            throw new Exception("    Erro: Lista vazia!");
+            throw new Exception("    Erro ao Busca: Lista vazia!");
         }
 
         Nodo itemAtual;
@@ -36,7 +36,7 @@ public class ListaDuplamenteLigada {
              itemAtual = itemAtual.getProximo());
 
         if (itemAtual == null) {
-            throw new Exception("    Erro: O item não consta na Lista!");
+            throw new Exception("    Erro ao Busca: O item não consta na Lista!");
         }
         return itemAtual.getAtual();
     }
@@ -58,7 +58,7 @@ public class ListaDuplamenteLigada {
     public void addLeft(Item novoItem) throws Exception {
         Item jaTinha = search(novoItem);
         if (jaTinha != null) {
-            throw new Exception("    Erro: O item está na Lista!");
+            throw new Exception("    Erro ao Addicionar: O item está na Lista!");
         }
 
         Nodo novo = new Nodo(novoItem);
@@ -90,7 +90,7 @@ public class ListaDuplamenteLigada {
     public void addRight(Item novoItem) throws Exception {
         Item jaTinha = search(novoItem);
         if (jaTinha != null) {
-            throw new Exception("    Erro: O item já está na Lista!");
+            throw new Exception("    Erro ao Adicionar: O item já está na Lista!");
         }
         
         Nodo novo = new Nodo(novoItem);
@@ -129,7 +129,7 @@ public class ListaDuplamenteLigada {
      */
     public String delete(Item item) throws Exception {
         if (isEmpity()) {
-            throw new Exception("    Erro: Lista vazia!");
+            throw new Exception("    Erro ao Deletar: Lista vazia!");
         }
         
         Nodo itemAtual;
@@ -141,7 +141,7 @@ public class ListaDuplamenteLigada {
              itemAnterior = itemAtual, itemAtual = itemAtual.getProximo());
         
         if (itemAtual == null) {
-            throw new Exception("    Erro: O item não consta na Lista!");
+            throw new Exception("    Erro ao Deletar: O item não consta na Lista!");
         }
         itemDeletado = itemAtual.getAtual();
         
