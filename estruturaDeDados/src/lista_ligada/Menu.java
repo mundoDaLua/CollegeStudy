@@ -21,7 +21,7 @@ public class Menu {
             lista.add(fruta);
             System.out.println(fruta.getNome() + " adicionada com sucesso!");
         } catch (Exception e) {
-            System.out.println("    Erro: " + fruta.getNome() + " não adicionada, pois ja constava na Lista!");
+            System.out.println(e.getMessage());
         }
     }
 
