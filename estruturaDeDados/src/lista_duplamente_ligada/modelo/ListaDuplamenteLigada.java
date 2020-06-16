@@ -1,10 +1,10 @@
 package lista_duplamente_ligada.modelo;
 
 /**
- * Na Lista Duplamente Ligada, cada Nó (Node/Nodo) aponta tanto para o anterior, quanto para o posterior
- * Permite o percurso em ambas as direções
- * Permite a inserção no inicio e no fim
- * Permite a remoção no inicio e no fim
+ * Na Lista Duplamente Ligada, cada Nó (Node/Nodo) aponta tanto para o anterior, quanto para o posterior<br><br>
+ * Permite o percurso em ambas as direções<br>
+ * Permite a inserção no inicio e no fim<br>
+ * Permite a remoção no inicio e no fim<br>
  *
  * @author barcelosluan
  * @version 0.1.0
@@ -12,22 +12,24 @@ package lista_duplamente_ligada.modelo;
 public class ListaDuplamenteLigada {
 
     private Nodo esquerda;
-    private Nodo direita;
+    //private Nodo direita;
     private int quantidade;
 
     public ListaDuplamenteLigada() {
         esquerda = null;
-        direita = null;
+        //direita = null;
+        quantidade = 0;
     }
 
     public boolean isEmpity() {
-        return (esquerda == null && direita == null);
+        return (esquerda == null /*&& direita == null*/);
     }
 
-    // Busca Linear da esquerda para a direita na ListaDuplamenteLigada
-    public Item search(Item item) throws Exception {
+    /** Busca Linear da esquerda para a direita na ListaDuplamenteLigada */
+    public Item search(Item item) /*throws Exception*/ {
         if (isEmpity()) {
-            throw new Exception("    Erro ao Busca: Lista vazia!");
+            return null;
+//            throw new Exception("    Erro ao Buscar: Lista vazia!");
         }
 
         Nodo itemAtual;
@@ -36,12 +38,13 @@ public class ListaDuplamenteLigada {
              itemAtual = itemAtual.getProximo());
 
         if (itemAtual == null) {
-            throw new Exception("    Erro ao Busca: O item não consta na Lista!");
+//            throw new Exception("    Erro ao Buscar: O item não consta na Lista!");
+            return null;
         }
         return itemAtual.getAtual();
     }
 
-    /*
+    /**
      * Procura se o Item jaTinha na ListaDuplamenteLigada
      * Se encontrar
      *      retorna um Erro
@@ -64,16 +67,18 @@ public class ListaDuplamenteLigada {
         Nodo novo = new Nodo(novoItem);
         if (isEmpity()) {
             esquerda = novo;
+            //direita = novo;
         } else {
-            esquerda.setProximo(novo);
-            novo.setAnterior(esquerda);
+            novo.setProximo(esquerda);
+            esquerda.setAnterior(novo);
             esquerda = novo;
         }
         
         quantidade++;
     }
     
-    /*
+    /**
+     * TODO Adicionar a Direita
      * Procura se o Item jaTinha na ListaDuplamenteLigada
      * Se encontrar
      *      retorna um Erro
@@ -87,25 +92,26 @@ public class ListaDuplamenteLigada {
      *      Atribui o Nodo direita ao Nodo proximo do Nodo novo
      *      Atribui o Nodo novo ao Nodo direita
      */
-    public void addRight(Item novoItem) throws Exception {
-        Item jaTinha = search(novoItem);
-        if (jaTinha != null) {
-            throw new Exception("    Erro ao Adicionar: O item já está na Lista!");
-        }
-        
-        Nodo novo = new Nodo(novoItem);
-        if (isEmpity()) {
-            direita = novo;
-        } else {
-            direita.setAnterior(novo);
-            novo.setProximo(direita);
-            direita = novo;
-        }
-        
-        quantidade++;
-    }
+//    public void addRight(Item novoItem) throws Exception {
+//        Item jaTinha = search(novoItem);
+//        if (jaTinha != null) {
+//            throw new Exception("    Erro ao Adicionar: O item já está na Lista!");
+//        }
+//
+//        Nodo novo = new Nodo(novoItem);
+//        if (isEmpity()) {
+//            direita = novo;
+//            esquerda = novo;
+//        } else {
+//            direita.setAnterior(novo);
+//            novo.setProximo(direita);
+//            direita = novo;
+//        }
+//
+//        quantidade++;
+//    }
     
-    /*
+    /**
      * Método de Remoção de um Item
      *
      * Se a ListaDuplamenteLigada está vazia
@@ -157,30 +163,29 @@ public class ListaDuplamenteLigada {
         return itemDeletado.getNome();
     }
     
-    // Informa todas as Frutas presentes na ListaLigadaDesordenada
+    /** Informa todas os Itens presentes na ListaDuplamenteLigada */
     public String print() {
         if (isEmpity()) {
             return "Lista Vazia";
         }
         
-        String listaItem = "\n    [\n";
+        String listaItem = "\n    {\n";
         Nodo i;
         int j;
-        int k;
-        for (i = esquerda, j = quantidade, k = 1; i != null; i = i.getProximo(), j--, k++) {
-            if (j == 1) {
-                listaItem += "      Item " + k + ": {\n" +
+        for (i = esquerda, j = quantidade; i != null; i = i.getProximo(), j--) {
+            if (j > 1) {
+                listaItem += "      Item " + j + ": {\n" +
                         "          Nome: " + i.getAtual().getNome() + ",\n" +
-                        "          Quantidade: " + i.getAtual().getQuantidade() + ",\n" +
-                        "          },\n";
+                        "          Quantidade: " + i.getAtual().getQuantidade() + "\n" +
+                        "      },\n";
             } else {
-                listaItem += "      Item " + k + ": {\n" +
+                listaItem += "      Item " + j + ": {\n" +
                         "          Nome: " + i.getAtual().getNome() + ",\n" +
-                        "          Quantidade: " + i.getAtual().getQuantidade() + ",\n" +
-                        "          }\n";
+                        "          Quantidade: " + i.getAtual().getQuantidade() + "\n" +
+                        "      }\n";
             }
         }
         
-        return listaItem + "    ]";
+        return listaItem + "    }";
     }
 }

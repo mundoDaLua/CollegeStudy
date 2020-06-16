@@ -7,9 +7,9 @@ public class Nodo {
     private Nodo anterior;
 
     public Nodo(Item atual) {
+        this.anterior = null;
         this.atual = atual;
         this.proximo = null;
-        this.anterior = null;
     }
 
     public Item getAtual() {
