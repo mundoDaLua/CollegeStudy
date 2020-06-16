@@ -2,8 +2,6 @@ Data: 10-03-20202
 
 Conteudo:
 
-TODO TP1ListadeExercicios02-Classes
-
 1 - Crie uma classe chamada AdivinhaNumero. Essa classe deve ter um atributo privado int chamado
 numero. Crie os métodos get e set para o atributo. Crie um método privado chamado sorteiaNumero,
 que criará um valor aleatório de 1 a 100 para o atributo numero. Utilize esse método em um construtor

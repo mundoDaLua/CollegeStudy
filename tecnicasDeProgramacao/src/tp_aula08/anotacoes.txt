@@ -1,5 +1,3 @@
 Data: 06-03-2020
 
 Conteudo: Criar uma classe de Pessoas que receba "nome", "altura", e "dataNascimento" e calcule a idade com base no dia de hoje.
-
-TODO descobrir como se altera pessoa.nome, pessoa.sexo, pessoa.dataNascimento, pessoa.altura pela seleção de um menu
