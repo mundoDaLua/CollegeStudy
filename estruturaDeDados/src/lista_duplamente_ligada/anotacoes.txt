@@ -1,0 +1,16 @@
+Objetivos da Atividade:
+
+    * Aplicar a estrutura de dados lista duplamente ou simplesmente encadeada no processo de tratamento de dados
+    armazenados em um arquivo-texto.
+
+    * Modelar o problema utilizando a UML – Diagrama de Classe (Opcional);
+
+    * Empregar, adequadamente, os conceitos de orientação a objetos utilizando a linguagem Java;
+
+    * Construir o programa utilizando interface gráfica ou menu de escolhas em linha de comando.
+
+Descrição da Atividade:
+
+    O programa deve ler os dados de um arquivos-texto, agrupar estes dados nos respectivos objetos e inseri-los nas
+    estruturas de dados em ordem crescente ou decrescente. Os dados ordenados devem ser apresentados na tela, conforme
+    escolha do usuário (crescente ou decrescente). No final ou a qualquer momento salvar os dados no arquivo texto.
