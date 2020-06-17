@@ -1,0 +1,33 @@
+Data: 16-06-2020
+
+Conteúdo:
+
+Crie uma interface chamada IPessoa com um método chamado listar sem parâmetros.
+
+Crie uma classe abstrata chamada Pessoa que implemente a interface Ipessoa. A classe Pessoa deve possuir um atributo
+privado String nome e um atributo privado int cpf e seus respectivos GETTERs. A classe Pessoa deve ter um construtor
+que inicialize todos os atributos através de parâmetros fornecidos pelo usuário.
+
+Crie uma classe Aluno que herde a classe Pessoa. A classe aluno deve ter um atributo privado inteiro matricula e um
+construtor adequado.
+
+Crie uma classe Professor que herde a classe Pessoa. A classe aluno deve ter um atributo privado inteiro codMateria e
+um construtor adequado.
+
+Implemente o método listar nas classes Aluno e Professor. Esse método irá imprimir as informações dos objetos Aluno e
+Professor (cada um com seus dados específicos).
+
+Para o programa principal:
+    • Crie uma List implementada como ArrayList de Pessoa.
+    • Crie um menu com o seguinte aspecto:
+
+#########################
+#  1-Adicionar                         #
+#  2-Listar                               #
+#  9-Sair                                 #
+#########################
+Opcao:
+
+    • Implemente um método estático para cada uma da opções do Menu.
+    • Ao adicionar, peça ao usuário se ele deseja adicionar um objeto Aluno ou Professor na List.
+    • Para listar, utilize o método listar() implementado em cada uma das classes Aluno e Professor.
