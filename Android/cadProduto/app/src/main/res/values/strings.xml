@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CadProduto</string>
+    <string name="txtTituloCadastro">Cadastro Produto</string>
+    <string name="txtTituloLista">Produtos Cadastrados</string>
+    <string name="btnCadastrar">Cadastrar</string>
+    <string name="btnTelaLista">Voltar</string>
+    <string name="btnTelaCadastro">Novo Cadastro</string>
+    <string name="txtCodigo">Código:</string>
+    <string name="txtPreco">Preço: R$</string>
+</resources>

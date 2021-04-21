@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Troca Tela</string>
+    <string name="main_txt">Hello Friend</string>
+    <string name="main_btn">Proxima</string>
+    <string name="secondary_txt">Domo Arigato Mister Roboto</string>
+    <string name="secondary_btn">Anterior</string>
+    <string name="github">github: @barcelosluan</string>
+    <string name="assinatura">desenvolvido por Luan F Barcelos</string>
+</resources>

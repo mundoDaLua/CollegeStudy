@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/registra_evento_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="42sp"
+        android:textAlignment="center"
+        android:text="Registrador de Eventos"
+        />
+
+    <EditText
+        android:id="@+id/edit_registra_evento_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="24sp"
+        android:hint="Nome do Evento"
+        android:text=""
+        />
+
+    <EditText
+        android:id="@+id/edit_registra_evento_data"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:hint="Data do Evento"
+        android:text=""
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_registra_evento_registrar"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:textStyle="bold"
+            android:text="Registrar"
+            />
+
+        <Button
+            android:id="@+id/btn_registra_evento_voltar"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:textStyle="bold"
+            android:text="Voltar"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lista_registra_evento"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="30dp">
+    </ListView>
+
+</LinearLayout>
