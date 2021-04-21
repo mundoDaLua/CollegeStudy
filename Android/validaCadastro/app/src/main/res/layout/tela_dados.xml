@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Dados Cadastrados"
+        android:textAlignment="center"
+        android:textColor="@color/yellow_200"
+        android:textStyle="bold"
+        android:textSize="42sp"
+        />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@id/text">
+
+        <TextView
+            android:id="@+id/tv_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_700"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:textSize="24sp"
+            android:text="nome"
+            />
+
+        <TextView
+            android:id="@+id/tv_cpf"
+            android:layout_below="@+id/tv_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_700"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_marginTop="24dp"
+            android:text="cpf"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_nasc"
+            android:layout_below="@+id/tv_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_700"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_marginTop="24dp"
+            android:text="nascimento"
+            />
+        <TextView
+            android:id="@+id/tv_fone"
+            android:layout_below="@+id/tv_nasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_700"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_marginTop="24dp"
+            android:text="telefone"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_cel"
+            android:layout_below="@+id/tv_fone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_700"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_marginTop="24dp"
+            android:text="celular"
+            />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_below="@+id/tv_cel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_700"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:layout_marginTop="24dp"
+            android:text="email"
+            />
+
+        <Button
+            android:id="@+id/btn_adicionar_novo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Editar"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/red_700"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/gerador_aleatorio_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:textSize="42sp"
+        android:text="Gerador Aleatorio"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="150dp"
+            android:layout_gravity="center"
+            >
+
+            <EditText
+                android:id="@+id/edit_gerador_aleatorio_minimo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:ems="10"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:hint="Valor Minimo"
+                android:text=""
+                />
+
+            <EditText
+                android:id="@+id/edit_gerador_aleatorio_maximo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="24dp"
+                android:ems="10"
+                android:textAlignment="center"
+                android:hint="Valor Maximo"
+                android:inputType="number"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/gerador_aleatorio_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:text="Resultado"
+        />
+
+    <Button
+        android:id="@+id/btn_gerador_aleatorio_gerar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:text="Gerar"
+        />
+
+    <Button
+        android:id="@+id/btn_gerador_aleatorio_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"
+        android:text="Voltar"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/jankenpon_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:text="Jankenpon"
+        android:textSize="42sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_jankenpon_pedra"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="35dp"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/jankenpon_pedra" />
+
+        <ImageButton
+            android:id="@+id/btn_jankenpon_papel"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/jankenpon_papel" />
+
+        <ImageButton
+            android:id="@+id/btn_jankenpon_tesoura"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/jankenpon_tesoura" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="70dp">
+
+            <TextView
+                android:id="@+id/txt_jankenpon_jogador"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Jogador"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/img_jankenpon_jogador"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/jankenpon" />
+
+            <TextView
+                android:id="@+id/txt_jankenpon_placar_jogador"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="0"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:id="@+id/txt_jankenpon_maquina"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Máquina"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/img_jankenpon_maquina"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/jankenpon" />
+
+            <TextView
+                android:id="@+id/txt_jankenpon_placar_maquina"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="0"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/btn_jankenpon_zerar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:textStyle="bold"
+        android:text="Zerar"
+        />
+
+    <Button
+        android:id="@+id/btn_jankenpon_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:textStyle="bold"
+        android:text="Voltar"
+        />
+    </LinearLayout>
+
+</LinearLayout>
